@@ -1,0 +1,15 @@
+<div class="hero-unit">
+  <h1>Battleships!</h1>
+  <p>Welcome! You'll be playing against the local Rails AI. Don't worry - it's not very smart.</p>
+  <p>Good luck!</p>
+
+  <%= simple_form_for(@game, :html => {:class => 'form-horizontal1'}) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :email, :placeholder => 'name@example.com' %>
+    <p>
+      <%= f.submit raw('Start Game &raquo;'), :class => 'btn btn-primary btn-large' %>
+    </p>
+
+  <% end %>
+
+</div>

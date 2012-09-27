@@ -1,0 +1,31 @@
+<div class="hero-unit">
+
+  <dl id="ship-type-legend" class="dl-horizontal">
+    <% ShipType.all.each do |type| %>
+      <dt><%= type.prefix %> -</dt>
+      <dd><%= type.name %></dd>
+    <% end %>
+  </dl>
+
+  <dl id="shot-legend" class="dl-horizontal">
+    <dt>X -</dt>
+    <dd>Hit</dd>
+
+    <dt>O -</dt>
+    <dd>Miss</dd>
+  </dl>
+
+  <h1>Game #<%= @game.id %></h1>
+</div>
+
+<div class="row">
+  <div class="span12">
+    <p>Click on your opponent's board to fire a shot.</p>
+  </div>
+</div>
+
+<div id="boards_container">
+  <%= render :partial => 'boards', :locals => {:game => @game} %>
+</div>
+
+

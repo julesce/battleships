@@ -1,0 +1,30 @@
+== Setup
+
+Install the relevant gems:
+        bundle install
+
+Create your database:
+        rake db:create
+
+Migrate your database:
+        rake db:migrate
+
+Seed the initial starting data. See db/fixtures.
+        rake db:seed_fu
+
+And fire up the server!
+        rails s
+
+== Testing
+
+To run the test suite, simply fire up rspec after initialising the test database:
+
+        rake db:test:prepare
+
+        rspec .
+
+== To Do
+
+* Create exhaustive integration tests using Capybara etc. to really test the UI thoroughly.
+* Localise the app.
+* Build a smarter local AI to play against.
